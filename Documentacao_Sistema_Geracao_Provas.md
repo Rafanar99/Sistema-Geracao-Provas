@@ -3,14 +3,11 @@
 ## 1. Visão Geral
 **Nome do Projeto:** Sistema de Geração de Provas  
 **Curso:** Análise e Desenvolvimento de Sistemas - FATEC Guarulhos  
-**Autores:** [Nome dos integrantes do grupo]  
-**Orientador:** [Nome do professor orientador]  
-**Data:** [Mês/Ano]  
+**Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Gustavo Lima, Rafael Wiliam, Zen
+**Orientador:** Jadir
 
 ### Descrição
-O sistema tem como objetivo facilitar o processo de criação, armazenamento e exportação de provas por professores.  
-Após se cadastrarem com nome, e-mail, CPF e senha, os professores podem acessar a plataforma, escolher entre utilizar provas existentes ou criar novas, com até 20 questões por prova, e exportar o conteúdo final em formato PDF.
-
+A elaboração manual de provas é um processo que demanda tempo e organização por parte dos professores. Este projeto propõe o desenvolvimento de um sistema web que permita o cadastro de professores, criação e gerenciamento de provas de forma automatizada, incluindo exportação em PDF. O trabalho tem como objetivo otimizar o processo de criação de provas e reduzir erros humanos.
 ---
 
 ## 2. Objetivos e Escopo
