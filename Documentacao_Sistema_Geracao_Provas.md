@@ -1,10 +1,52 @@
 # 🧾 Documentação do Projeto — Sistema de Geração de Provas
 
-## 1. Visão Geral
 **Nome do Projeto:** Sistema de Geração de Provas  
 **Curso:** Análise e Desenvolvimento de Sistemas - FATEC Guarulhos  
 **Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Gustavo Lima, Rafael Wiliam, Zen
 **Orientador:** Jadir
+
+## 1. Sumário
+
+Visão geral / Introdução
+
+Objetivos e escopo
+
+Stakeholders
+
+Requisitos
+
+Funcionais
+
+Não funcionais
+
+Casos de uso / Usuários e fluxos
+
+Requisitos de interface (UI / wireframes)
+
+Modelagem de dados (ER / tabelas)
+
+Arquitetura e diagrama de componentes
+
+APIs / Contratos (se aplicável)
+
+Regras de negócio detalhadas
+
+Validações e constraints (ex.: CPF, limite 20 questões)
+
+Geração de PDF (detalhes técnicos)
+
+Segurança e conformidade (ex.: LGPD)
+
+Testes (unitários, integração, aceitação)
+
+Implantação / DevOps / backup
+
+Manual do usuário (professor) e manual do administrador
+
+Plano de manutenção e evolução
+
+Glossário / Anexos / Referências
+
 
 ### Descrição
 A elaboração manual de provas é um processo que demanda tempo e organização por parte dos professores. Este projeto propõe o desenvolvimento de um sistema web que permita o cadastro de professores, criação e gerenciamento de provas de forma automatizada, incluindo exportação em PDF. O trabalho tem como objetivo otimizar o processo de criação de provas e reduzir erros humanos.
