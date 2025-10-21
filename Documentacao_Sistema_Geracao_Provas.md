@@ -7,45 +7,41 @@
 
 ## 1. Sumário
 
-Visão geral / Introdução
+2. Visão geral / Introdução
 
-Objetivos e escopo
+3. Objetivos e escopo
 
-Stakeholders
+4. Stakeholders
 
-Requisitos
+5. Requisitos Funcionais e Não funcionais
 
-Funcionais
+6. Casos de uso / Usuários e fluxos
 
-Não funcionais
+7. Requisitos de interface (UI / wireframes)
 
-Casos de uso / Usuários e fluxos
+8. Modelagem de dados (ER / tabelas)
 
-Requisitos de interface (UI / wireframes)
+9. Arquitetura e diagrama de componentes
 
-Modelagem de dados (ER / tabelas)
+10. APIs / Contratos (se aplicável)
 
-Arquitetura e diagrama de componentes
+11. Regras de negócio detalhadas
 
-APIs / Contratos (se aplicável)
+12. Validações e constraints (ex.: CPF, limite 20 questões)
 
-Regras de negócio detalhadas
+13. Geração de PDF (detalhes técnicos)
 
-Validações e constraints (ex.: CPF, limite 20 questões)
+14. Segurança e conformidade (ex.: LGPD)
 
-Geração de PDF (detalhes técnicos)
+15. Testes (unitários, integração, aceitação)
 
-Segurança e conformidade (ex.: LGPD)
+16. Implantação / DevOps / backup
 
-Testes (unitários, integração, aceitação)
+17. Manual do usuário (professor) e manual do administrador
 
-Implantação / DevOps / backup
+18. Plano de manutenção e evolução
 
-Manual do usuário (professor) e manual do administrador
-
-Plano de manutenção e evolução
-
-Glossário / Anexos / Referências
+19. Glossário / Anexos / Referências
 
 
 ### Descrição
