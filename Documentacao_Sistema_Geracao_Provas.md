@@ -44,11 +44,11 @@
 19. Glossário / Anexos / Referências
 
 
-### Descrição
+### 2. Visão Geral / Introdução
 A elaboração manual de provas é um processo que demanda tempo e organização por parte dos professores. Este projeto propõe o desenvolvimento de um sistema web que permita o cadastro de professores, criação e gerenciamento de provas de forma automatizada, incluindo exportação em PDF. O trabalho tem como objetivo otimizar o processo de criação de provas e reduzir erros humanos.
 ---
 
-## 2. Objetivos e Escopo
+## 3. Objetivos e Escopo
 
 ### Objetivo Geral
 Desenvolver um sistema web que permita que professores criem, gerenciem e exportem provas de forma prática e segura.
@@ -74,9 +74,19 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 3. Requisitos
+## 4. Stakeholders
 
-### 3.1 Requisitos Funcionais (RF)
+1. Professor (usuário principal)
+
+2. Administrador do sistema
+
+3. Equipe de desenvolvimento
+
+4. Coordenador do curso / TI da instituição
+
+## 5. Requisitos
+
+### 5.1 Requisitos Funcionais (RF)
 | Código | Descrição |
 |---------|------------|
 | RF01 | O sistema deve permitir o cadastro de professores com nome, e-mail, CPF e senha. |
@@ -87,7 +97,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 | RF06 | O sistema deve permitir salvar, editar e excluir provas. |
 | RF07 | O sistema deve gerar uma versão PDF da prova criada. |
 
-### 3.2 Requisitos Não Funcionais (RNF)
+### 5.2 Requisitos Não Funcionais (RNF)
 | Código | Descrição |
 |---------|------------|
 | RNF01 | As senhas devem ser armazenadas de forma criptografada. |
@@ -98,7 +108,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 4. Casos de Uso / Fluxos do Usuário
+## 6. Casos de Uso / Fluxos do Usuário
 
 ### UC01 — Cadastro de Professor
 **Atores:** Professor  
@@ -124,7 +134,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 5. Modelagem de Dados
+## 6. Modelagem de Dados
 
 ### Entidades Principais
 - **Professor** — guarda informações pessoais e credenciais.  
@@ -144,7 +154,7 @@ Alternativa (id, questao_id, texto, correta)
 
 ---
 
-## 6. Arquitetura do Sistema
+## 7. Arquitetura do Sistema
 
 ### Tecnologias
 - **Front-end:** HTML5, CSS3, JavaScript (ou React.js)  
@@ -166,7 +176,7 @@ Alternativa (id, questao_id, texto, correta)
 
 ---
 
-## 7. Regras de Negócio
+## 8. Regras de Negócio
 - Cada professor só pode editar ou excluir provas criadas por ele.  
 - O limite máximo de **20 questões por prova** é obrigatório.  
 - É necessário informar **pelo menos uma alternativa** por questão.  
@@ -175,7 +185,7 @@ Alternativa (id, questao_id, texto, correta)
 
 ---
 
-## 8. Segurança e LGPD
+## 9. Segurança e LGPD
 - Senhas criptografadas (ex.: bcrypt).  
 - Comunicação via HTTPS.  
 - Proteção contra SQL Injection e XSS.  
@@ -184,7 +194,7 @@ Alternativa (id, questao_id, texto, correta)
 
 ---
 
-## 9. Testes
+## 10. Testes
 ### Tipos de Testes
 - **Unitários:** Testar funções individuais (ex.: validação de CPF).  
 - **Integração:** Cadastro, login e fluxo de criação de prova.  
@@ -200,7 +210,7 @@ Alternativa (id, questao_id, texto, correta)
 
 ---
 
-## 10. Conclusão e Próximos Passos
+## 11. Conclusão e Próximos Passos
 O sistema proposto contribui para otimizar o processo de elaboração de provas, reduzindo tempo e padronizando formatos.  
 Como próximos passos, o projeto pode ser ampliado com:
 - Banco de questões reutilizáveis;  
