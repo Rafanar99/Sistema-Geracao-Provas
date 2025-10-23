@@ -110,27 +110,47 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ## 6. Casos de Uso / Fluxos do Usuário
 
-### UC01 — Cadastro de Professor
-**Atores:** Professor  
-**Descrição:** Permite o registro de um novo usuário no sistema.  
+### UC01 — Efetuar Login
+**Atores:** Professor, coordenador
+**Descrição:** Permite que o usuário autenticado (professor ou coordenador) acesse o sistema.  
 **Fluxo Principal:**
-1. Usuário acessa a tela de cadastro.  
-2. Preenche nome, e-mail, CPF e senha.  
-3. O sistema valida os dados e cria o registro.  
-4. Usuário é redirecionado para a tela de login.
+1. Usuário acessa a tela de login.  
+2. Informa email e senha.  
+3. O sistema valida as credenciais.  
+4. Usuário é redirecionado para o painel correspondente ao seu perfil.
 
-### UC02 — Login
+### UC02 — Criar Prova
 **Atores:** Professor  
-**Descrição:** Autenticação com e-mail e senha para acesso ao sistema.
+**Descrição:** Permite ao professor criar uma prova associada a uma disciplina.
+**Fluxo Principal:**
+1. Professor acessa a tela de criação de prova.  
+2. Seleciona a disciplina.
+3. Define o número de perguntas (ate 20).  
+4. Adiciona o enunciado e alternativas de cada questão.
+5. Salve a prova.
+   Fluxo Alternativo:
+   - Se o número de perguntas exceder 20, o sistema exibe uma mensagem de erro.
+   - Se algum campo obrigatório não for preenchido, o sistema alerta o usuário.
 
-### UC03 — Criar Prova
+### UC03 — Imprimir Prova
 **Atores:** Professor  
-**Descrição:** O usuário escolhe uma matéria e cria até 20 questões.  
-**Fluxo Alternativo:** Se tentar adicionar mais de 20 questões, o sistema exibe uma mensagem de erro.
+**Descrição:** Após criar ou selecionar uma prova, o sistema gera um arquivo PDF formatado para impressão. 
+**Fluxo Principal:**
+1. Professor seleciona a prova desejada.
+2. Clica em "Imprimir prova".
+3. O sistema gera o arquivo PDF com cabeçalho (nome, disciplina, data).
+4. O arquivo é disponibilizado para download ou impressão.
 
-### UC04 — Exportar Prova em PDF
-**Atores:** Professor  
-**Descrição:** Após finalizar a prova, o sistema gera um arquivo PDF formatado com cabeçalho, nome do professor, matéria e data.
+### UC04 — Cadastrar Questão
+**Atores:** Coordenador  
+**Descrição:** Permite ao coordenador cadastrar novas questões que poderão ser utilizadas pelos professores.
+**Fluxo Principal:**
+1. Coordenador acessa o módulo de provas.
+2. Seleciona a prova existente.
+3. O sistema exibe detalhes (questões e respostas).
+4. Coordenador pode editar ou excluir informações, se necessário.
+
+[Caso de Uso.pdf](https://github.com/user-attachments/files/23106324/Caso.de.Uso.pdf)
 
 ---
 
