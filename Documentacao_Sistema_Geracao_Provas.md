@@ -68,7 +68,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 4. Stakeholders
+## 3. Stakeholders
 
 1. Professor (usuário principal)
 
@@ -76,20 +76,22 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 3. Equipe de desenvolvimento
 
-## 5. Requisitos
+## 4. Requisitos
 
-### 5.1 Requisitos Funcionais (RF)
+### 4.1 Requisitos Funcionais (RF)
 | Código | Descrição |
 |---------|------------|
-| RF01 | O sistema deve permitir o cadastro de professores com nome, e-mail, CPF e senha. |
+| RF01 | Cadastro de usuários (professor / público) com nome, e-mail, CPF (quando aplicável) e senha. |
 | RF02 | O sistema deve validar CPF e e-mail únicos. |
 | RF03 | O professor deve fazer login com e-mail e senha. |
 | RF04 | O sistema deve permitir selecionar uma matéria para criar ou visualizar provas. |
-| RF05 | O professor pode criar até 20 questões por prova. |
-| RF06 | O sistema deve permitir salvar, editar e excluir provas. |
-| RF07 | O sistema deve gerar uma versão PDF da prova criada. |
+| RF05 | CRUD de provas e questões |
+| RF06 | Exportação de prova para PDF (opções: incluir gabarito, cabeçalho institucional). |
+| RF07 | Geração de prova aleatória pública (sem login) a partir do repositório de questões. |
+| RF08 | Histórico de provas geradas por usuário logado. |
+| RF09 | Permissões: apenas criador pode editar/excluir a prova (exceto ADMIN).
 
-### 5.2 Requisitos Não Funcionais (RNF)
+### 4.2 Requisitos Não Funcionais (RNF)
 | Código | Descrição |
 |---------|------------|
 | RNF01 | As senhas devem ser armazenadas de forma criptografada. |
