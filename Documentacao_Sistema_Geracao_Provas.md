@@ -5,60 +5,54 @@
 **Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Gustavo Lima, Rafael Wiliam, Zen
 **Orientador:** Jadir
 
-## 1. Sumário
+## Sumário
 
-2. Visão geral / Introdução
+1. Visão geral / Introdução
 
-3. Objetivos e escopo
+2. Objetivos e escopo
 
-4. Stakeholders
+3. Stakeholders
 
-5. Requisitos Funcionais e Não funcionais
+4. Requisitos Funcionais e Não funcionais
 
-6. Casos de uso / Usuários e fluxos
+5. Casos de uso / Fluxos do Usuário
 
-7. Requisitos de interface (UI / wireframes)
+6. Modelagem do Sistema (DER / Tabelas)
 
-8. Modelagem de dados (ER / tabelas)
+7. Requisitos de Interface (UI / Wireframes)
 
-9. Arquitetura e diagrama de componentes
+8. Arquitetura e diagrama de componentes
 
-10. APIs / Contratos (se aplicável)
+9. APIs
 
-11. Regras de negócio detalhadas
+10. Regras de negócio detalhadas
 
-12. Validações e constraints (ex.: CPF, limite 20 questões)
+11. Validações e constraints (ex.: CPF, limite 20 questões)
 
-13. Geração de PDF (detalhes técnicos)
+12. Geração de PDF (detalhes técnicos)
 
-14. Segurança e conformidade (ex.: LGPD)
+13. Segurança e conformidade (LGPD)
 
-15. Testes (unitários, integração, aceitação)
+14. Testes (unitários, integração, aceitação)
 
-16. Implantação / DevOps / backup
-
-17. Manual do usuário (professor) e manual do administrador
-
-18. Plano de manutenção e evolução
-
-19. Glossário / Anexos / Referências
+15. Implantação / DevOps / backup
 
 
-### 2. Visão Geral / Introdução
-A elaboração manual de provas é um processo que demanda tempo e organização por parte dos professores. Este projeto propõe o desenvolvimento de um sistema web que permita o cadastro de professores, criação e gerenciamento de provas de forma automatizada, incluindo exportação em PDF. O trabalho tem como objetivo otimizar o processo de criação de provas e reduzir erros humanos.
+
+### 1. Visão Geral / Introdução
+A elaboração manual de provas demanda tempo e disciplina. O EasyQuiz é um sistema web que facilita a criação, o gerenciamento e a exportação de provas em PDF. Professores poderão cadastrar-se, criar provas com até 20 questões, reutilizar questões do repositório e exportar provas com cabeçalho institucional.
 ---
 
-## 3. Objetivos e Escopo
+## 2. Objetivos e Escopo
 
 ### Objetivo Geral
 Desenvolver um sistema web que permita que professores criem, gerenciem e exportem provas de forma prática e segura.
 
 ### Objetivos Específicos
 - Permitir o **cadastro e autenticação de professores** com validação de CPF.  
-- Implementar um **painel de controle** para criação, edição e exclusão de provas.  
-- Limitar o número de questões por prova a **20 unidades**.  
+- Implementar um **painel de controle** para criação, edição e exclusão de provas.   
 - Organizar as provas por **matéria**.  
-- Permitir **exportação das provas em formato PDF**.  
+- Permitir **exportação das provas em formato PDF customizável**.  
 - Garantir a **segurança de dados e usabilidade** da aplicação.
 
 ### Escopo
@@ -81,8 +75,6 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 2. Administrador do sistema
 
 3. Equipe de desenvolvimento
-
-4. Coordenador do curso / TI da instituição
 
 ## 5. Requisitos
 
