@@ -95,13 +95,17 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 
 ### 4.2 Requisitos Não Funcionais (RNF)
-| Código | Descrição |
-|---------|------------|
-| RNF01 | As senhas devem ser armazenadas de forma criptografada. |
-| RNF02 | O sistema deve ser responsivo e acessível em dispositivos móveis. |
-| RNF03 | O tempo de geração do PDF não deve ultrapassar 5 segundos. |
-| RNF04 | O sistema deve seguir boas práticas de segurança e LGPD. |
-| RNF05 | O sistema deve suportar, no mínimo, 100 usuários simultâneos. |
+| Código | Descrição                                                                              |
+| ------ | -------------------------------------------------------------------------------------- |
+| RNF01  | Senhas devem ser armazenadas com hash seguro (bcrypt/argon2).                          |
+| RNF02  | O sistema deve utilizar autenticação baseada em tokens (JWT).                          |
+| RNF03  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails transacionais.          |
+| RNF04  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**. |
+| RNF05  | O sistema deve utilizar MySQL como banco de dados principal.                           |
+| RNF06  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                |
+| RNF07  | A geração de PDF não deve ultrapassar 5 segundos.                                      |
+| RNF08  | Deve estar em conformidade com padrões mínimos da LGPD.                                |
+
 
 ---
 
