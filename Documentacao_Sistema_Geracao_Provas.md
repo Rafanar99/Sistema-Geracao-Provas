@@ -109,7 +109,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 6. Casos de Uso / Fluxos do Usuário
+## 5. Casos de Uso / Fluxos do Usuário
 
 ### UC01 — Efetuar Login
 **Atores:** Professor, coordenador
@@ -155,7 +155,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 6. Modelagem de Dados
+## 6. Modelagem do sistema (DER)
 
 ### Entidades Principais
 - **Professor** — guarda informações pessoais e credenciais.  
