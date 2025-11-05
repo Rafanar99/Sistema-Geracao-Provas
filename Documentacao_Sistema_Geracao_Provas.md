@@ -79,17 +79,20 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 ## 4. Requisitos
 
 ### 4.1 Requisitos Funcionais (RF)
-| Código | Descrição |
-|---------|------------|
-| RF01 | Cadastro de usuários (professor / público) com nome, e-mail, CPF (quando aplicável) e senha. |
-| RF02 | O sistema deve validar CPF e e-mail únicos. |
-| RF03 | O professor deve fazer login com e-mail e senha. |
-| RF04 | O sistema deve permitir selecionar uma matéria para criar ou visualizar provas. |
-| RF05 | CRUD de provas e questões |
-| RF06 | Exportação de prova para PDF (opções: incluir gabarito, cabeçalho institucional). |
-| RF07 | Geração de prova aleatória pública (sem login) a partir do repositório de questões. |
-| RF08 | Histórico de provas geradas por usuário logado. |
-| RF09 | Permissões: apenas criador pode editar/excluir a prova (exceto ADMIN).
+| Código | Descrição                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------- |
+| RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.                          |
+| RF02   | O sistema deve permitir o login por e-mail e senha.                                                                   |
+| RF03   | O sistema deve enviar automaticamente uma senha gerada ao e-mail do professor cadastrado.                             |
+| RF04   | O sistema deve registrar em log todas as ações de criação, edição e exclusão realizadas por ADMIN (LogCRUD).          |
+| RF05   | O sistema deve permitir o CRUD de disciplinas.                                                                        |
+| RF06   | O sistema deve associar professores às disciplinas.                                                                   |
+| RF07   | O sistema deve manter um repositório de questões com: enunciado, tipo, dificuldade e alternativas (quando aplicável). |
+| RF08   | O professor pode criar provas utilizando questões do repositório.                                                     |
+| RF09   | Cada prova pode conter até **20 questões**.                                                                           |
+| RF10   | O sistema deve permitir gerar **PDF personalizado** contendo Nome/RA/Data/Logo da instituição.                        |
+| RF11   | O sistema deve permitir gerar provas **aleatórias** para usuários não autenticados.                                   |
+
 
 ### 4.2 Requisitos Não Funcionais (RNF)
 | Código | Descrição |
