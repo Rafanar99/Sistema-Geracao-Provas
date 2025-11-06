@@ -89,9 +89,8 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 | RF06   | O sistema deve associar professores às disciplinas.                                                                   |
 | RF07   | O sistema deve manter um repositório de questões com: enunciado, tipo, dificuldade e alternativas (quando aplicável). |
 | RF08   | O professor pode criar provas utilizando questões do repositório.                                                     |
-| RF09   | Cada prova pode conter até **20 questões**.                                                                           |
-| RF10   | O sistema deve permitir gerar **PDF personalizado** contendo Nome/RA/Data/Logo da instituição.                        |
-| RF11   | O sistema deve permitir gerar provas **aleatórias** para usuários não autenticados.                                   |
+| RF09   | Não tem Limite de questões.                                                                           |
+| RF10   | O sistema deve permitir gerar **PDF personalizado** contendo Nome/RA/Data/Logo da instituição.                        |                                  |
 
 
 ### 4.2 Requisitos Não Funcionais (RNF)
