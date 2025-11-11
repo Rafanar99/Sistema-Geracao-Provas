@@ -156,21 +156,24 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ## 6. Modelagem do sistema (DER)
 
-### Entidades Principais
-- **Professor** — guarda informações pessoais e credenciais.  
-- **Matéria** — disciplinas cadastradas no sistema.  
-- **Prova** — metadados da prova (título, data, professor, matéria).  
-- **Questão** — enunciado e alternativas.  
-- **Alternativa** — opções de resposta.
+usuario: Armazena os dados dos usuários do sistema, podendo ser Administrador, Professor ou Usuário Público.
+Atributos principais: id, nome, email, senha_hash, tipo, criado_em.
 
-### Exemplo de Modelo ER
-```
-Professor (id, nome, email, cpf, senha_hash)
-Materia (id, nome)
-Prova (id, titulo, materia_id, professor_id, criado_em)
-Questao (id, prova_id, enunciado, ordem)
-Alternativa (id, questao_id, texto, correta)
-```
+disciplina: Lista das disciplinas cadastradas no sistema.
+Atributos: id, nome.
+
+professor_disciplina: Tabela associativa que estabelece o relacionamento muitos-para-muitos entre professor e disciplina.
+
+questao: Representa uma pergunta cadastrada no sistema, podendo ser de diferentes tipos (Dissertativa, Alternativa, Verdadeiro/Falso) e com níveis de dificuldade.
+Atributos: id, titulo, descricao, tipo, dificuldade, disciplina_id, criado_por, data_criacao, data_ultima_modificacao.
+
+opcao_resposta: Armazena as alternativas de questões do tipo objetiva.
+Atributos: id, questao_id, texto_resposta, correta.
+
+log_crud: Tabela de auditoria, registrando ações administrativas como criação e exclusão de professores.
+Atributos: id, admin_id, acao, registro_afetado, data_hora.
+
+DER: https://dbdiagram.io/d/EasyQuiz-69136e556735e111704da191
 
 ---
 
