@@ -110,7 +110,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ## 5. Casos de Uso / Fluxos do Usuário
 
-UC01 — Efetuar Login
+## UC01 — Efetuar Login
 
 Atores: Administrador, Professor
 Descrição: Permite o acesso ao sistema mediante autenticação de credenciais.
@@ -127,7 +127,7 @@ Fluxo Alternativo:
 
 Se as credenciais estiverem incorretas, o sistema exibe mensagem de erro.
 
-UC02 — Cadastrar Professor
+## UC02 — Cadastrar Professor
 
 Atores: Administrador
 Descrição: Permite ao administrador cadastrar novos professores no sistema.
@@ -144,7 +144,7 @@ Fluxo Alternativo:
 
 Se o e-mail informado já estiver cadastrado, o sistema exibe mensagem de erro.
 
-UC03 — Criar Prova
+## UC03 — Criar Prova
 
 Atores: Professor
 Descrição: Permite ao professor criar uma prova associada a uma disciplina.
@@ -165,7 +165,7 @@ Fluxo Alternativo:
 
 Se algum campo obrigatório (título ou conteúdo) não for preenchido, o sistema exibe alerta.
 
-UC04 — Listar / Editar / Excluir Provas
+## UC04 — Listar / Editar / Excluir Provas
 
 Atores: Professor
 Descrição: Permite ao professor visualizar todas as provas criadas, editar conteúdo ou excluir.
@@ -184,7 +184,7 @@ Fluxo Alternativo:
 
 Se não houver provas cadastradas, o sistema exibe mensagem “Nenhuma prova criada”.
 
-UC05 — Gerar PDF da Prova
+## UC05 — Gerar PDF da Prova
 
 Atores: Professor
 Descrição: Permite gerar um arquivo PDF formatado da prova criada.
@@ -227,14 +227,19 @@ DER: https://dbdiagram.io/d/EasyQuiz-69136e556735e111704da191
 
 ---
 
-## 7. Arquitetura do Sistema
+## 7. Requisitos de Interface (UI / Wireframes)
 
-### Tecnologias
-- **Front-end:** HTML5, CSS3, JavaScript (ou React.js)  
-- **Back-end:** Node.js / Express (ou Python Flask/Django)  
-- **Banco de Dados:** MySQL ou PostgreSQL  
-- **PDF Generator:** jsPDF / wkhtmltopdf / PDFKit  
-- **Hospedagem:** Render / Vercel / Railway  
+### 7.1 Telas do Sistema
+
+| Tela                                  | Descrição                                     |
+| ------------------------------------- | --------------------------------------------- |
+| Tela de Login                         | Autenticação de usuários.                     |
+| Tela de Cadastro de Professor (ADMIN) | Permite criação de novos professores.         |
+| Dashboard Principal do Professor      | Acesso às disciplinas e provas.               |
+| Tela de Criação de Prova              | Editor para digitação direta das questões.    |
+| Tela de Listagem de Provas            | Exibe todas as provas criadas pelo professor. |
+| Tela de Geração / Download do PDF     | Exibe preview e botão “Gerar PDF”.            |
+
 
 ### Diagrama Simplificado
 ```
