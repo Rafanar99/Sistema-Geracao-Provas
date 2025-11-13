@@ -110,47 +110,97 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ## 5. Casos de Uso / Fluxos do Usuário
 
-### UC01 — Efetuar Login
-**Atores:** Professor, coordenador
-**Descrição:** Permite que o usuário autenticado (professor ou coordenador) acesse o sistema.  
-**Fluxo Principal:**
-1. Usuário acessa a tela de login.  
-2. Informa email e senha.  
-3. O sistema valida as credenciais.  
-4. Usuário é redirecionado para o painel correspondente ao seu perfil.
+UC01 — Efetuar Login
 
-### UC02 — Criar Prova
-**Atores:** Professor  
-**Descrição:** Permite ao professor criar uma prova associada a uma disciplina.
-**Fluxo Principal:**
-1. Professor acessa a tela de criação de prova.  
-2. Seleciona a disciplina.
-3. Define o número de perguntas (ate 20).  
-4. Adiciona o enunciado e alternativas de cada questão.
-5. Salve a prova.
-   Fluxo Alternativo:
-   - Se o número de perguntas exceder 20, o sistema exibe uma mensagem de erro.
-   - Se algum campo obrigatório não for preenchido, o sistema alerta o usuário.
+Atores: Administrador, Professor
+Descrição: Permite o acesso ao sistema mediante autenticação de credenciais.
+Fluxo Principal:
 
-### UC03 — Imprimir Prova
-**Atores:** Professor  
-**Descrição:** Após criar ou selecionar uma prova, o sistema gera um arquivo PDF formatado para impressão. 
-**Fluxo Principal:**
-1. Professor seleciona a prova desejada.
-2. Clica em "Imprimir prova".
-3. O sistema gera o arquivo PDF com cabeçalho (nome, disciplina, data).
-4. O arquivo é disponibilizado para download ou impressão.
+Usuário acessa a tela de login.
 
-### UC04 — Cadastrar Questão
-**Atores:** Coordenador  
-**Descrição:** Permite ao coordenador cadastrar novas questões que poderão ser utilizadas pelos professores.
-**Fluxo Principal:**
-1. Coordenador acessa o módulo de provas.
-2. Seleciona a prova existente.
-3. O sistema exibe detalhes (questões e respostas).
-4. Coordenador pode editar ou excluir informações, se necessário.
+Informa e-mail e senha.
 
-[Caso de Uso.pdf](https://github.com/user-attachments/files/23106324/Caso.de.Uso.pdf)
+O sistema valida as credenciais.
+
+Usuário é redirecionado ao painel correspondente ao seu perfil (ADMIN ou PROFESSOR).
+Fluxo Alternativo:
+
+Se as credenciais estiverem incorretas, o sistema exibe mensagem de erro.
+
+UC02 — Cadastrar Professor
+
+Atores: Administrador
+Descrição: Permite ao administrador cadastrar novos professores no sistema.
+Fluxo Principal:
+
+Administrador acessa o menu “Usuários”.
+
+Informa nome, e-mail e tipo de usuário (Professor).
+
+O sistema gera uma senha temporária e envia por e-mail ao professor.
+
+O sistema registra a operação em log de auditoria (log_crud).
+Fluxo Alternativo:
+
+Se o e-mail informado já estiver cadastrado, o sistema exibe mensagem de erro.
+
+UC03 — Criar Prova
+
+Atores: Professor
+Descrição: Permite ao professor criar uma prova associada a uma disciplina.
+Fluxo Principal:
+
+Professor acessa o menu “Criar Prova”.
+
+Seleciona a disciplina.
+
+Informa o título da prova.
+
+Digita o conteúdo completo da prova (questões e cabeçalho) em campo de texto.
+
+Clica em Salvar.
+
+O sistema grava a prova no banco e exibe mensagem de sucesso.
+Fluxo Alternativo:
+
+Se algum campo obrigatório (título ou conteúdo) não for preenchido, o sistema exibe alerta.
+
+UC04 — Listar / Editar / Excluir Provas
+
+Atores: Professor
+Descrição: Permite ao professor visualizar todas as provas criadas, editar conteúdo ou excluir.
+Fluxo Principal:
+
+Professor acessa o menu “Minhas Provas”.
+
+O sistema exibe lista de provas criadas, com título, disciplina e data.
+
+Professor pode:
+
+Clicar em Editar para alterar o conteúdo.
+
+Clicar em Excluir para remover a prova.
+Fluxo Alternativo:
+
+Se não houver provas cadastradas, o sistema exibe mensagem “Nenhuma prova criada”.
+
+UC05 — Gerar PDF da Prova
+
+Atores: Professor
+Descrição: Permite gerar um arquivo PDF formatado da prova criada.
+Fluxo Principal:
+
+Professor seleciona uma prova existente.
+
+Clica em Gerar PDF.
+
+O sistema formata o conteúdo e adiciona cabeçalho (nome do professor, disciplina, data).
+
+O sistema disponibiliza o arquivo para download ou impressão.
+Fluxo Alternativo:
+
+Se a prova estiver vazia, o sistema exibe alerta e bloqueia a geração do PDF.
+
 
 ---
 
