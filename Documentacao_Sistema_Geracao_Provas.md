@@ -254,12 +254,53 @@ DER: https://dbdiagram.io/d/EasyQuiz-69136e556735e111704da191
 
 ---
 
-## 8. Regras de Negócio
-- Cada professor só pode editar ou excluir provas criadas por ele.  
-- O limite máximo de **20 questões por prova** é obrigatório.  
-- É necessário informar **pelo menos uma alternativa** por questão.  
-- CPF deve ser **único e válido**.  
-- PDF deve conter **nome do professor, disciplina e data**.
+## 8. Arquitetura e diagrama de componentes
+
+## 8.1 Arquitetura do Sistema
+
+O sistema EasyQuiz foi desenvolvido seguindo o modelo cliente-servidor com arquitetura em camadas, visando modularidade, escalabilidade e facilidade de manutenção.
+A aplicação é composta por três camadas principais:
+
+## 1. Camada de Apresentação (Front-end)
+
+- Responsável pela interface com o usuário (UI).
+
+- Desenvolvida em Next.js com Tailwind CSS para estilização.
+
+Comunicação com o backend via requisições HTTP (REST API).
+
+Responsável por renderizar páginas como Login, Dashboard, Criação de Prova e Geração de PDF.
+
+2. Camada de Lógica de Negócio (Back-end)
+
+Implementada em Java (Spring Boot 3.x).
+
+Contém as regras de negócio: cadastro de usuários, controle de acesso, criação e edição de provas, e geração de logs.
+
+Expõe endpoints RESTful consumidos pelo front-end.
+
+Faz integração com biblioteca de geração de PDF (ex.: iTextPDF).
+
+Controla a persistência dos dados no banco.
+
+3. Camada de Dados (Banco de Dados)
+
+Utiliza MySQL como SGBD relacional.
+
+Responsável pelo armazenamento persistente de usuários, disciplinas, provas e logs.
+
+Comunicação com o backend via Spring Data JPA.
+
+Integridade garantida por chaves estrangeiras e constraints definidas no DER.
+
+4. Integrações e Serviços de Suporte
+
+Envio de e-mails (cadastro de professores) via SMTP/TLS.
+
+Autenticação e segurança com JWT (JSON Web Token).
+
+Hospedagem em ambiente Railway ou Render, com deploy automatizado.
+
 
 ---
 
