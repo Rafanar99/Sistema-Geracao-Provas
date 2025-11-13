@@ -116,16 +116,16 @@ Atores: Administrador, Professor
 Descrição: Permite o acesso ao sistema mediante autenticação de credenciais.
 Fluxo Principal:
 
-Usuário acessa a tela de login.
+- Usuário acessa a tela de login.
 
-Informa e-mail e senha.
+- Informa e-mail e senha.
 
-O sistema valida as credenciais.
+- O sistema valida as credenciais.
 
-Usuário é redirecionado ao painel correspondente ao seu perfil (ADMIN ou PROFESSOR).
+- Usuário é redirecionado ao painel correspondente ao seu perfil (ADMIN ou PROFESSOR).
 Fluxo Alternativo:
 
-Se as credenciais estiverem incorretas, o sistema exibe mensagem de erro.
+- Se as credenciais estiverem incorretas, o sistema exibe mensagem de erro.
 
 ## UC02 — Cadastrar Professor
 
