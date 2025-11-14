@@ -133,16 +133,16 @@ Atores: Administrador
 Descrição: Permite ao administrador cadastrar novos professores no sistema.
 Fluxo Principal:
 
-Administrador acessa o menu “Usuários”.
+- Administrador acessa o menu “Usuários”.
 
-Informa nome, e-mail e tipo de usuário (Professor).
+- Informa nome, e-mail e tipo de usuário (Professor).
 
-O sistema gera uma senha temporária e envia por e-mail ao professor.
+- O sistema gera uma senha temporária e envia por e-mail ao professor.
 
-O sistema registra a operação em log de auditoria (log_crud).
+- O sistema registra a operação em log de auditoria (log_crud).
 Fluxo Alternativo:
 
-Se o e-mail informado já estiver cadastrado, o sistema exibe mensagem de erro.
+- Se o e-mail informado já estiver cadastrado, o sistema exibe mensagem de erro.
 
 ## UC03 — Criar Prova
 
@@ -150,20 +150,20 @@ Atores: Professor
 Descrição: Permite ao professor criar uma prova associada a uma disciplina.
 Fluxo Principal:
 
-Professor acessa o menu “Criar Prova”.
+- Professor acessa o menu “Criar Prova”.
 
-Seleciona a disciplina.
+- Seleciona a disciplina.
 
-Informa o título da prova.
+- Informa o título da prova.
 
-Digita o conteúdo completo da prova (questões e cabeçalho) em campo de texto.
+- Digita o conteúdo completo da prova (questões e cabeçalho) em campo de texto.
 
-Clica em Salvar.
+- Clica em Salvar.
 
-O sistema grava a prova no banco e exibe mensagem de sucesso.
+- O sistema grava a prova no banco e exibe mensagem de sucesso.
 Fluxo Alternativo:
 
-Se algum campo obrigatório (título ou conteúdo) não for preenchido, o sistema exibe alerta.
+- Se algum campo obrigatório (título ou conteúdo) não for preenchido, o sistema exibe alerta.
 
 ## UC04 — Listar / Editar / Excluir Provas
 
@@ -171,18 +171,18 @@ Atores: Professor
 Descrição: Permite ao professor visualizar todas as provas criadas, editar conteúdo ou excluir.
 Fluxo Principal:
 
-Professor acessa o menu “Minhas Provas”.
+- Professor acessa o menu “Minhas Provas”.
 
-O sistema exibe lista de provas criadas, com título, disciplina e data.
+- O sistema exibe lista de provas criadas, com título, disciplina e data.
 
 Professor pode:
 
-Clicar em Editar para alterar o conteúdo.
+- Clicar em Editar para alterar o conteúdo.
 
-Clicar em Excluir para remover a prova.
+- Clicar em Excluir para remover a prova.
 Fluxo Alternativo:
 
-Se não houver provas cadastradas, o sistema exibe mensagem “Nenhuma prova criada”.
+- Se não houver provas cadastradas, o sistema exibe mensagem “Nenhuma prova criada”.
 
 ## UC05 — Gerar PDF da Prova
 
@@ -190,37 +190,37 @@ Atores: Professor
 Descrição: Permite gerar um arquivo PDF formatado da prova criada.
 Fluxo Principal:
 
-Professor seleciona uma prova existente.
+- Professor seleciona uma prova existente.
 
-Clica em Gerar PDF.
+- Clica em Gerar PDF.
 
-O sistema formata o conteúdo e adiciona cabeçalho (nome do professor, disciplina, data).
+- O sistema formata o conteúdo e adiciona cabeçalho (nome do professor, disciplina, data).
 
-O sistema disponibiliza o arquivo para download ou impressão.
+- O sistema disponibiliza o arquivo para download ou impressão.
 Fluxo Alternativo:
 
-Se a prova estiver vazia, o sistema exibe alerta e bloqueia a geração do PDF.
+- Se a prova estiver vazia, o sistema exibe alerta e bloqueia a geração do PDF.
 
 
 ---
 
 ## 6. Modelagem do sistema (DER)
 
-usuario: Armazena os dados dos usuários do sistema, podendo ser Administrador, Professor ou Usuário Público.
+- **usuario**: Armazena os dados dos usuários do sistema, podendo ser Administrador, Professor ou Usuário Público.
 Atributos principais: id, nome, email, senha_hash, tipo, criado_em.
 
-disciplina: Lista das disciplinas cadastradas no sistema.
+ - **disciplina**: Lista das disciplinas cadastradas no sistema.
 Atributos: id, nome.
 
-professor_disciplina: Tabela associativa que estabelece o relacionamento muitos-para-muitos entre professor e disciplina.
+- **professor_disciplina**: Tabela associativa que estabelece o relacionamento muitos-para-muitos entre professor e disciplina.
 
-questao: Representa uma pergunta cadastrada no sistema, podendo ser de diferentes tipos (Dissertativa, Alternativa, Verdadeiro/Falso) e com níveis de dificuldade.
+- **questao**: Representa uma pergunta cadastrada no sistema, podendo ser de diferentes tipos (Dissertativa, Alternativa, Verdadeiro/Falso) e com níveis de dificuldade.
 Atributos: id, titulo, descricao, tipo, dificuldade, disciplina_id, criado_por, data_criacao, data_ultima_modificacao.
 
-opcao_resposta: Armazena as alternativas de questões do tipo objetiva.
+- **opcao_resposta**: Armazena as alternativas de questões do tipo objetiva.
 Atributos: id, questao_id, texto_resposta, correta.
 
-log_crud: Tabela de auditoria, registrando ações administrativas como criação e exclusão de professores.
+- **log_crud**: Tabela de auditoria, registrando ações administrativas como criação e exclusão de professores.
 Atributos: id, admin_id, acao, registro_afetado, data_hora.
 
 DER: https://dbdiagram.io/d/EasyQuiz-69136e556735e111704da191
@@ -267,39 +267,54 @@ A aplicação é composta por três camadas principais:
 
 - Desenvolvida em Next.js com Tailwind CSS para estilização.
 
-Comunicação com o backend via requisições HTTP (REST API).
+- Comunicação com o backend via requisições HTTP (REST API).
 
-Responsável por renderizar páginas como Login, Dashboard, Criação de Prova e Geração de PDF.
+- Responsável por renderizar páginas como Login, Dashboard, Criação de Prova e Geração de PDF.
 
 2. Camada de Lógica de Negócio (Back-end)
 
-Implementada em Java (Spring Boot 3.x).
+- Implementada em Java com SpringBoot
 
-Contém as regras de negócio: cadastro de usuários, controle de acesso, criação e edição de provas, e geração de logs.
+- Contém as regras de negócio: cadastro de usuários, controle de acesso, criação e edição de provas, e geração de logs.
 
-Expõe endpoints RESTful consumidos pelo front-end.
+- Expõe endpoints RESTful consumidos pelo front-end.
 
-Faz integração com biblioteca de geração de PDF (ex.: iTextPDF).
+- Faz integração com biblioteca de geração de PDF (ex.: iTextPDF).
 
-Controla a persistência dos dados no banco.
+- Controla a persistência dos dados no banco.
 
-3. Camada de Dados (Banco de Dados)
+## 3. Camada de Dados (Banco de Dados)
 
-Utiliza MySQL como SGBD relacional.
+- Utiliza MySQL como SGBD relacional.
 
-Responsável pelo armazenamento persistente de usuários, disciplinas, provas e logs.
+- Responsável pelo armazenamento persistente de usuários, disciplinas, provas e logs.
 
-Comunicação com o backend via Spring Data JPA.
+- Comunicação com o backend via Spring Data JPA.
 
-Integridade garantida por chaves estrangeiras e constraints definidas no DER.
+- Integridade garantida por chaves estrangeiras e constraints definidas no DER.
 
-4. Integrações e Serviços de Suporte
+## 4. Integrações e Serviços de Suporte
 
-Envio de e-mails (cadastro de professores) via SMTP/TLS.
+- Envio de e-mails (cadastro de professores) via SMTP/TLS.
 
-Autenticação e segurança com JWT (JSON Web Token).
+- Autenticação e segurança com JWT (JSON Web Token).
 
-Hospedagem em ambiente Railway ou Render, com deploy automatizado.
+- Hospedagem em ambiente Railway ou Render, com deploy automatizado.
+
+## 8.2 Diagrama de Componentes
+
+## 8.3 Tecnologias Utilizadas
+
+| Camada         | Tecnologia                   | Função                                   |
+| -------------- | ---------------------------- | ---------------------------------------- |
+| Front-end      | **Next.js / Tailwind CSS**   | Interface responsiva e rápida            |
+| Back-end       | **Spring Boot 3.x**          | Lógica de negócio e APIs REST            |
+| Banco de Dados | **MySQL**                    | Persistência de dados                    |
+| Segurança      | **JWT / Spring Security**    | Autenticação e controle de acesso        |
+| E-mail         | **JavaMail / SMTP**          | Envio automático de senha e notificações |
+| PDF            | **iTextPDF / JasperReports** | Geração e formatação de provas           |
+| Deploy         | **Railway / Render**         | Hospedagem do back-end e banco de dados  |
+
 
 
 ---
