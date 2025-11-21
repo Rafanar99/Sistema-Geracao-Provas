@@ -223,7 +223,8 @@ Atributos: id, questao_id, texto_resposta, correta.
 - **log_crud**: Tabela de auditoria, registrando ações administrativas como criação e exclusão de professores.
 Atributos: id, admin_id, acao, registro_afetado, data_hora.
 
-DER: https://dbdiagram.io/d/EasyQuiz-69136e556735e111704da191
+DER: <img width="887" height="526" alt="image" src="https://github.com/user-attachments/assets/c6764280-97cd-47d1-8573-0b25374878e0" />
+
 
 ---
 
