@@ -242,16 +242,6 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 | Tela de Geração / Download do PDF     | Exibe preview e botão “Gerar PDF”.            |
 
 
-### Diagrama Simplificado
-```
-[Interface Web]
-     ↓
-[API REST - Backend]
-     ↓
-[Banco de Dados]
-     ↓
-[Geração de PDF]
-```
 
 ---
 
@@ -303,6 +293,7 @@ A aplicação é composta por três camadas principais:
 - Hospedagem em ambiente Railway ou Render, com deploy automatizado.
 
 ## 8.2 Diagrama de Componentes
+<img width="1178" height="576" alt="image" src="https://github.com/user-attachments/assets/e5061286-c121-4f68-9f8b-087d4756bbe2" />
 
 ## 8.3 Tecnologias Utilizadas
 
