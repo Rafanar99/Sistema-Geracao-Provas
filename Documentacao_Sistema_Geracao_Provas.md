@@ -23,7 +23,7 @@
 
 8. Arquitetura e diagrama de componentes
 
-9. APIs
+9. Segurança e conformidade (LGPD)
 
 10. Regras de negócio detalhadas
 
@@ -31,7 +31,7 @@
 
 12. Geração de PDF (detalhes técnicos)
 
-13. Segurança e conformidade (LGPD)
+13. APIS
 
 14. Testes (unitários, integração, aceitação)
 
