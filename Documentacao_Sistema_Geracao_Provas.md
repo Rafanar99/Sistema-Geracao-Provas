@@ -143,62 +143,56 @@ Fluxo Alternativo:
 
 - Se o e-mail informado já estiver cadastrado, o sistema exibe mensagem de erro.
 
-## UC03 — Criar Prova
+## UC03 — Gerar PDF da Prova
 
-Atores: Professor
+Atores: Professor ou adminitrador
 Descrição: Permite ao professor criar uma prova associada a uma disciplina.
 Fluxo Principal:
 
 - Professor acessa o menu “Criar Prova”.
 
-- Seleciona a disciplina.
+- Preenche as informações da prova.
 
-- Informa o título da prova.
+- Escolhe o conteúdo completo da prova (questões) em campo de texto.
 
-- Digita o conteúdo completo da prova (questões e cabeçalho) em campo de texto.
+- Clica em Exportar pra PDF.
 
-- Clica em Salvar.
-
-- O sistema grava a prova no banco e exibe mensagem de sucesso.
+- O sistema gera o download da prova.
 Fluxo Alternativo:
 
 - Se algum campo obrigatório (título ou conteúdo) não for preenchido, o sistema exibe alerta.
 
-## UC04 — Listar / Editar / Excluir Provas
+## UC04 — Cadastrar Disciplina
 
-Atores: Professor
-Descrição: Permite ao professor visualizar todas as provas criadas, editar conteúdo ou excluir.
+Atores: Adminitrador
+Descrição: Permite ao Administrador criar uma disciplina.
 Fluxo Principal:
 
-- Professor acessa o menu “Minhas Provas”.
+- Adminitrador acessa o menu “Disciplinas”.
 
-- O sistema exibe lista de provas criadas, com título, disciplina e data.
+- Preenche o nome da disciplina.
 
-Professor pode:
+- Clica em cadastrar.
 
-- Clicar em Editar para alterar o conteúdo.
-
-- Clicar em Excluir para remover a prova.
 Fluxo Alternativo:
 
-- Se não houver provas cadastradas, o sistema exibe mensagem “Nenhuma prova criada”.
+- Se já existir uma disciplina com este nome, o sistema exibe uma mensagem de alerta.
 
-## UC05 — Gerar PDF da Prova
+ ## UC05 — Gerenciar Questões
 
-Atores: Professor
-Descrição: Permite gerar um arquivo PDF formatado da prova criada.
+Atores: Professor ou Adminitrador
+Descrição: Permite ao professor ou Administrador gerenciar questões criadas.
 Fluxo Principal:
 
-- Professor seleciona uma prova existente.
+- professor ou administrador acessa o menu "Minhas Questões".
 
-- Clica em Gerar PDF.
+- Preenche o nome da disciplina.
 
-- O sistema formata o conteúdo e adiciona cabeçalho (nome do professor, disciplina, data).
+- Clica em cadastrar.
 
-- O sistema disponibiliza o arquivo para download ou impressão.
 Fluxo Alternativo:
 
-- Se a prova estiver vazia, o sistema exibe alerta e bloqueia a geração do PDF.
+- Se já existir uma disciplina com este nome, o sistema exibe uma mensagem de alerta.
 
 
 ---
@@ -235,10 +229,10 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 | ------------------------------------- | --------------------------------------------- |
 | Tela de Login                         | Autenticação de usuários.                     |
 | Tela de Cadastro de Professor (ADMIN) | Permite criação de novos professores.         |
-| Dashboard Principal do Professor      | Acesso às disciplinas e provas.               |
-| Tela de Criação de Prova              | Editor para digitação direta das questões.    |
-| Tela de Listagem de Provas            | Exibe todas as provas criadas pelo professor. |
-| Tela de Geração / Download do PDF     | Exibe preview e botão “Gerar PDF”.            |
+| Dashboard Principal do Professor      | Acesso a visão geral das funcionalidades.     |
+| Tela de Criação de Prova              | Exportar provas em PDF.    |
+| Tela de Editar perfil                 | Permite editar perfil já criado.            |
+| Tela de registros                     | Visualizar logs e registros do sistema.            |
 
 
 
@@ -269,7 +263,7 @@ A aplicação é composta por três camadas principais:
 
 - Expõe endpoints RESTful consumidos pelo front-end.
 
-- Faz integração com biblioteca de geração de PDF (ex.: iTextPDF).
+- Faz integração com biblioteca de geração de PDF (PDFMAKE).
 
 - Controla a persistência dos dados no banco.
 
@@ -277,7 +271,7 @@ A aplicação é composta por três camadas principais:
 
 - Utiliza MySQL como SGBD relacional.
 
-- Responsável pelo armazenamento persistente de usuários, disciplinas, provas e logs.
+- Responsável pelo armazenamento persistente de usuários, disciplinas, questões e logs.
 
 - Comunicação com o backend via Spring Data JPA.
 
@@ -286,8 +280,6 @@ A aplicação é composta por três camadas principais:
 ## 4. Integrações e Serviços de Suporte
 
 - Envio de e-mails (cadastro de professores) via SMTP/TLS.
-
-- Autenticação e segurança com JWT (JSON Web Token).
 
 - Hospedagem em ambiente Railway ou Render, com deploy automatizado.
 
@@ -301,25 +293,12 @@ A aplicação é composta por três camadas principais:
 | Front-end      | **Next.js / Tailwind CSS**   | Interface responsiva e rápida            |
 | Back-end       | **Spring Boot 3.x**          | Lógica de negócio e APIs REST            |
 | Banco de Dados | **MySQL**                    | Persistência de dados                    |
-| Segurança      | **JWT / Spring Security**    | Autenticação e controle de acesso        |
 | E-mail         | **JavaMail / SMTP**          | Envio automático de senha e notificações |
-| PDF            | **iTextPDF / JasperReports** | Geração e formatação de provas           |
-| Deploy         | **Railway / Render**         | Hospedagem do back-end e banco de dados  |
-
-
+| PDF            | **PDFMAKE **                 | Geração e formatação de provas           |
 
 ---
 
-## 9. Segurança e LGPD
-- Senhas criptografadas (ex.: bcrypt).  
-- Comunicação via HTTPS.  
-- Proteção contra SQL Injection e XSS.  
-- Consentimento explícito para uso de dados pessoais (nome, e-mail, CPF).  
-- Possibilidade de exclusão de conta a pedido do usuário.  
-
----
-
-## 10. Testes
+## 9. Testes
 ### Tipos de Testes
 - **Unitários:** Testar funções individuais (ex.: validação de CPF).  
 - **Integração:** Cadastro, login e fluxo de criação de prova.  
@@ -333,15 +312,9 @@ A aplicação é composta por três camadas principais:
 | CT03 | Criar prova com 21 questões | Rejeitar última questão |
 | CT04 | Gerar PDF | Criar arquivo formatado corretamente |
 
+
 ---
-
-## 11. Conclusão e Próximos Passos
-O sistema proposto contribui para otimizar o processo de elaboração de provas, reduzindo tempo e padronizando formatos.  
-Como próximos passos, o projeto pode ser ampliado com:
-- Banco de questões reutilizáveis;  
-- Compartilhamento de provas entre professores;  
-- Aplicação online com correção automática.
-
+## 10. Fluxos do Sistema (Diagramas de Sequência)
 ---
 
 ## 📚 Referências
