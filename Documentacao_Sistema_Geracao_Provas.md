@@ -84,7 +84,8 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 
 ### 4.2 Requisitos Não Funcionais (RNF)
-| Código | Descrição                                                                              |
+| Código | Descrição                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------- |
 | RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.          |
 | RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**. |
 | RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                           |
