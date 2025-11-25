@@ -85,14 +85,11 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ### 4.2 Requisitos Não Funcionais (RNF)
 | Código | Descrição                                                                              |
-| ------ | -------------------------------------------------------------------------------------- |
-| RNF01  |                           |
-| RNF02  |                           |
-| RNF03  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.          |
-| RNF04  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**. |
-| RNF05  | O sistema deve utilizar MySQL como banco de dados principal.                           |
-| RNF06  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                |
-| RNF07  | A geração de PDF não deve ultrapassar 5 segundos.                                      |
+| RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.          |
+| RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**. |
+| RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                           |
+| RNF04  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                |
+| RNF05  | A geração de PDF não deve ultrapassar 5 segundos.                                      |
 
 
 ---
@@ -184,6 +181,7 @@ Fluxo Alternativo:
 
 - Se já existir uma disciplina com este nome, o sistema exibe uma mensagem de alerta.
 
+CASO DE USO: <img width="536" height="585" alt="image" src="https://github.com/user-attachments/assets/a69e50a4-e4c6-4d1c-af0e-d671affb41ec" />
 
 ---
 
