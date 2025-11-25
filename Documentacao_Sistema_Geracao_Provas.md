@@ -23,19 +23,9 @@
 
 8. Arquitetura e diagrama de componentes
 
-9. Segurança e conformidade (LGPD)
+9. Teste
 
-10. Regras de negócio detalhadas
-
-11. Validações e constraints (ex.: CPF, limite 20 questões)
-
-12. Geração de PDF (detalhes técnicos)
-
-13. APIS
-
-14. Testes (unitários, integração, aceitação)
-
-15. Implantação / DevOps / backup
+10. Fluxos do Sistema (Diagramas de Sequência)
 
 
 
