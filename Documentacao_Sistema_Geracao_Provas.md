@@ -35,19 +35,19 @@
 A elaboração manual de provas demanda tempo e disciplina. O EasyQuiz é um sistema web que facilita a criação, o gerenciamento e a exportação de provas em PDF. Professores poderão cadastrar-se, criar provas com até 20 questões, reutilizar questões do repositório e exportar provas com cabeçalho institucional.
 ---
 
-## 2. Objetivos e Escopo
+### 2. Objetivos e Escopo
 
-### Objetivo Geral
+## Objetivo Geral
 Desenvolver um sistema web que permita que professores criem, gerenciem e exportem provas de forma prática e segura.
 
-### Objetivos Específicos
+## Objetivos Específicos
 - Permitir o **cadastro e autenticação de professores** com validação de CPF.  
 - Implementar um **painel de controle** para criação, edição e exclusão de provas.   
 - Organizar as provas por **matéria**.  
 - Permitir **exportação das provas em formato PDF customizável**.  
 - Garantir a **segurança de dados e usabilidade** da aplicação.
 
-### Escopo
+## Escopo
 **Inclui:**
 - Cadastro, login e autenticação de usuários.  
 - CRUD de provas e questões.  
@@ -60,7 +60,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 3. Stakeholders
+### 3. Stakeholders
 
 1. Professor (usuário principal)
 
@@ -68,9 +68,9 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 3. Equipe de desenvolvimento
 
-## 4. Requisitos
+### 4. Requisitos
 
-### 4.1 Requisitos Funcionais (RF)
+## 4.1 Requisitos Funcionais (RF)
 | Código | Descrição                                                                                                             |
 | ------ | --------------------------------------------------------------------------------------------------------------------- |
 | RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.                          |
@@ -85,7 +85,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 | RF10   | O sistema deve permitir gerar **PDF personalizado** contendo Nome/RA/Data/Logo da instituição.                        |                                  |
 
 
-### 4.2 Requisitos Não Funcionais (RNF)
+## 4.2 Requisitos Não Funcionais (RNF)
 | Código | Descrição                                                                                                             |
 | ------ | --------------------------------------------------------------------------------------------------------------------- |
 | RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.          |
@@ -97,7 +97,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ---
 
-## 5. Casos de Uso / Fluxos do Usuário
+### 5. Casos de Uso / Fluxos do Usuário
 
 ## UC01 — Efetuar Login
 
@@ -228,7 +228,7 @@ CASO DE USO: <img width="688" height="644" alt="image" src="https://github.com/u
 
 ---
 
-## 6. Modelagem do sistema (DER)
+### 6. Modelagem do sistema (DER)
 
 - **usuario**: Armazena os dados dos usuários do sistema, podendo ser Administrador, Professor ou Usuário Público.
 Atributos principais: id, nome, email, senha_hash, tipo, criado_em.
@@ -252,7 +252,7 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 
 ---
 
-## 7. Requisitos de Interface (UI / Wireframes)
+### 7. Requisitos de Interface (UI / Wireframes)
 
 ### 7.1 Telas do Sistema
 
@@ -274,7 +274,7 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 
 ---
 
-## 8. Arquitetura e diagrama de componentes
+### 8. Arquitetura e diagrama de componentes
 
 ## 8.1 Arquitetura do Sistema
 
@@ -334,7 +334,7 @@ A aplicação é composta por três camadas principais:
 
 ---
 
-## 9. Implantação / Deployment
+### 9. Implantação / Deployment
 
 ## 9.1 Arquitetura de Hospedagem
 
@@ -355,7 +355,7 @@ A aplicação é composta por três camadas principais:
 
 - Conexão via variáveis de ambiente no Render
 
-  ##Variáveis configuradas no Render:
+  **Variáveis configuradas no Render:**
 
       DB_URL
 
@@ -406,9 +406,9 @@ A aplicação é composta por três camadas principais:
 
 ### 10. Testes
 
-# 10.1 Testes de Usuário e Autenticação
+## 10.1 Testes de Usuário e Autenticação
 
-## CT01 — Login com credenciais válidas
+# CT01 — Login com credenciais válidas
 
 - Objetivo: Verificar se o usuário consegue acessar o sistema.
 
@@ -416,19 +416,19 @@ A aplicação é composta por três camadas principais:
 
 - Resultado esperado: Acesso liberado e redirecionamento para o dashboard.
 
-## CT02 — Login com credenciais inválidas
+# CT02 — Login com credenciais inválidas
 
 - Entrada: E-mail ou senha incorreta.
 
 - Resultado esperado: Exibição de mensagem de erro.
 
-## CT03 — Criar usuário (ADMIN)
+# CT03 — Criar usuário (ADMIN)
 
 - Entrada: Nome + e-mail + tipo Professor.
 
 - Resultado esperado: Usuário criado e senha gerada automaticamente.
 
-## CT04 — Cadastro com e-mail duplicado
+# CT04 — Cadastro com e-mail duplicado
 
 - Resultado esperado: Sistema impede o cadastro e exibe erro.
 
@@ -470,88 +470,92 @@ A aplicação é composta por três camadas principais:
 
 - Resultado esperado: Sistema exibe todas as questões cadastradas.
 
-# 10.4 Testes de Filtros em “Explorar Questões”
+## 10.4 Testes de Filtros em “Explorar Questões”
 CT12 — Filtrar por disciplina
 
-Resultado esperado: Apenas questões da disciplina selecionada.
+- Resultado esperado: Apenas questões da disciplina selecionada.
 
-CT13 — Filtrar por criador
+# CT13 — Filtrar por criador
 
-Resultado esperado: Exibir questões do professor selecionado.
+- Resultado esperado: Exibir questões do professor selecionado.
 
-CT14 — Filtrar por dificuldade
+# CT14 — Filtrar por dificuldade
 
-Resultado esperado: Exibir somente questões “Fácil”, “Médio” ou “Difícil”.
+- Resultado esperado: Exibir somente questões “Fácil”, “Médio” ou “Difícil”.
 
-CT15 — Filtrar por tipo
+# CT15 — Filtrar por tipo
 
-Resultado esperado: Exibir apenas questões Dissertativas / Múltipla Escolha / V ou F.
+- Resultado esperado: Exibir apenas questões Dissertativas / Múltipla Escolha / V ou F.
 
-10.5 Testes de Geração de Prova
-CT16 — Selecionar questões para a prova
+## 10.5 Testes de Geração de Prova
 
-Entrada: Lista de questões marcadas.
+# CT16 — Selecionar questões para a prova
 
-Resultado esperado: Questões adicionadas à prova.
+- Entrada: Lista de questões marcadas.
 
-CT17 — Preencher cabeçalho da prova
+- Resultado esperado: Questões adicionadas à prova.
 
-Entrada: Instituição, curso, disciplina, professor, turma.
+# CT17 — Preencher cabeçalho da prova
 
-Resultado esperado: Dados incorporados ao PDF.
+- Entrada: Instituição, curso, disciplina, professor, turma.
 
-CT18 — Gerar PDF da prova
+- Resultado esperado: Dados incorporados ao PDF.
 
-Resultado esperado: PDF baixado, com layout correto e com todas as questões selecionadas.
+# CT18 — Gerar PDF da prova
 
-CT19 — Gerar PDF sem preencher campos obrigatórios
+- Resultado esperado: PDF baixado, com layout correto e com todas as questões selecionadas.
 
-Resultado esperado: Sistema impede e solicita preenchimento.
+# CT19 — Gerar PDF sem preencher campos obrigatórios
 
-10.6 Testes de Auditoria
-CT20 — Registrar criação de usuário
+- Resultado esperado: Sistema impede e solicita preenchimento.
 
-Ação: ADMIN cria novo professor.
+## 10.6 Testes de Auditoria
 
-Resultado esperado: Registro presente no log.
+# CT20 — Registrar criação de usuário
 
-CT21 — Registrar criação de disciplina
+- Ação: ADMIN cria novo professor.
 
-Resultado esperado: Log exibe ação realizada.
+- Resultado esperado: Registro presente no log.
 
-CT22 — Registrar CRUD de questões
+# CT21 — Registrar criação de disciplina
 
-Resultado esperado: Criação, edição e exclusão aparecem no log.
+- Resultado esperado: Log exibe ação realizada.
 
-CT23 — Visualizar log
+# CT22 — Registrar CRUD de questões
 
-Resultado esperado: ADMIN acessa e visualiza todos os registros.
+- Resultado esperado: Criação, edição e exclusão aparecem no log.
 
-9.7 Testes de Integração
-CT24 — Back-end + Front-end (Fluxo completo da prova)
+# CT23 — Visualizar log
 
-Criar disciplina → Criar questão → Selecionar questões → Gerar PDF.
+- Resultado esperado: ADMIN acessa e visualiza todos os registros.
 
-Resultado esperado: Todos os módulos funcionam em conjunto sem erro.
+## 10.7 Testes de Integração
 
-CT25 — Conexão com o banco (TiDB/MySQL)
+# CT24 — Back-end + Front-end (Fluxo completo da prova)
 
-Testar criação, leitura, atualização e exclusão.
+- Criar disciplina → Criar questão → Selecionar questões → Gerar PDF.
 
-Resultado esperado: Persistência correta.
+- Resultado esperado: Todos os módulos funcionam em conjunto sem erro.
 
-9.8 Testes Não Funcionais
-CT26 — Tempo de geração do PDF
+# CT25 — Conexão com o banco (TiDB/MySQL)
 
-Métrica: Máximo de 5 segundos.
+- Testar criação, leitura, atualização e exclusão.
 
-Resultado esperado: PDF gerado dentro do limite.
+- Resultado esperado: Persistência correta.
 
-CT27 — Segurança e autenticação
+## 10.8 Testes Não Funcionais
 
-Teste: Acesso a rotas administrativas sem login.
+# CT26 — Tempo de geração do PDF
 
-Resultado esperado: Sistema bloqueia acesso.
+- Métrica: Máximo de 5 segundos.
+
+- Resultado esperado: PDF gerado dentro do limite.
+
+# CT27 — Segurança e autenticação
+
+- Teste: Acesso a rotas administrativas sem login.
+
+- Resultado esperado: Sistema bloqueia acesso.
 
 ---
 ## 10. Fluxos do Sistema (Diagramas de Sequência)
