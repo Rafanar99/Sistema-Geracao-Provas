@@ -558,7 +558,117 @@ CT12 — Filtrar por disciplina
 - Resultado esperado: Sistema bloqueia acesso.
 
 ---
-## 10. Fluxos do Sistema (Diagramas de Sequência)
+# 10. Fluxos do Sistema (Diagramas de Sequência)
+
+## DS01 — Criar Questão
+
+Descrição: Fluxo completo de criação de uma nova questão no sistema.
+Atores: Professor, Administrador
+Resumo: O usuário preenche os dados de uma nova questão → o front-end envia para API → API valida → salva no banco → retorna sucesso.
+
+Fluxo Principal
+
+- Usuário acessa o menu “Criar Nova Questão”.
+
+- Preenche enunciado, disciplina, dificuldade, tipo e alternativas (se houver).
+
+- O front-end envia a requisição para o backend.
+
+- O backend valida e chama o serviço de persistência.
+
+- O banco salva a nova questão.
+
+- O backend retorna sucesso para o front-end.
+
+<img width="1188" height="619" alt="image" src="https://github.com/user-attachments/assets/da6eebb4-04c8-42d2-8b8c-6bc51df1fe0d" />
+
+
+## DS02 — Editar Questão
+
+Descrição: Permite modificar uma questão já cadastrada.
+Atores: Professor, Administrador
+
+Fluxo Principal
+
+- Usuário acessa “Minhas Questões”.
+
+- Seleciona uma questão para editar.
+
+- Altera os campos desejados.
+
+- Envia a atualização para a API.
+
+- API atualiza no banco.
+
+- Resposta de sucesso é retornada.
+
+<img width="982" height="655" alt="image" src="https://github.com/user-attachments/assets/b6eccfad-f2f8-4147-86c4-a9a67ee34375" />
+
+## DS03 — Gerar Prova (Fluxo Completo)
+
+Descrição: Montagem e geração do PDF da prova.
+Atores: Professor, Administrador
+
+Fluxo Principal
+
+- Usuário acessa “Gerar Prova”.
+
+- Sistema lista questões disponíveis.
+
+- Usuário seleciona questões.
+
+- Usuário preenche cabeçalho da prova.
+
+- Front-end envia tudo ao backend.
+
+- Backend busca as questões no banco.
+
+- Backend gera o PDF via PDFService.
+
+- PDF retorna ao front-end.
+
+- Download é disponibilizado ao usuário.
+
+<img width="1317" height="658" alt="image" src="https://github.com/user-attachments/assets/3ed4df5d-2e62-4487-ad88-4df60fe5cb6c" />
+
+## DS04 — Cadastrar Disciplina
+
+Atores: Administrador
+
+Fluxo Principal
+
+- ADMIN acessa “Cadastrar Nova Disciplina”.
+
+- Digita nome da disciplina.
+
+- Front-end envia POST para API.
+
+- Backend valida duplicidade.
+
+- Disciplina é salva no banco.
+
+- Retorno de sucesso é enviado.
+
+<img width="1057" height="591" alt="image" src="https://github.com/user-attachments/assets/cb223aeb-b824-44dc-aa44-de652adbd0d0" />
+
+## DS05 — Visualizar Logs de Auditoria
+
+Atores: Administrador
+
+Fluxo Principal
+
+- ADMIN acessa “Log de Auditoria”.
+
+- Front-end envia GET para API.
+
+- API consulta tabela de logs.
+
+- Backend retorna lista completa.
+
+- Front-end exibe entradas de auditoria.
+
+<img width="1213" height="562" alt="image" src="https://github.com/user-attachments/assets/77e5c3be-7592-4fbd-aa00-86701534bc58" />
+
 ---
 
 ## 📚 Referências
