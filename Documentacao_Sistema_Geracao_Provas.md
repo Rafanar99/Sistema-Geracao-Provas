@@ -23,9 +23,11 @@
 
 8. Arquitetura e diagrama de componentes
 
-9. Teste
+9. Implantação / Deployment
 
-10. Fluxos do Sistema (Diagramas de Sequência)
+10. Teste
+
+11. Fluxos do Sistema (Diagramas de Sequência)
 
 
 
@@ -287,7 +289,58 @@ A aplicação é composta por três camadas principais:
 
 ---
 
-## 9. Testes
+## 9. Implantação / Deployment
+
+9.1 Arquitetura de Hospedagem
+
+| Componente     | Serviço                            | Descrição                          |
+| -------------- | ---------------------------------- | ---------------------------------- |
+| Frontend       | **Vercel (Next.js)**               | Hospedagem do cliente web          |
+| Backend        | **Render (Spring Boot em Docker)** | API REST e lógica de negócio       |
+| Banco de Dados | **TiDB Cloud (MySQL compatível)**  | Armazenamento relacional escalável |
+
+
+9.2 Banco de Dados em TiDB Cloud
+
+- Instância provisionada na nuvem via painel da TiDB Cloud
+
+- Alta disponibilidade e compatibilidade total com MySQL
+
+- Credenciais protegidas (NÃO estão no repositório)
+
+- Conexão via variáveis de ambiente no Render
+
+- Variáveis configuradas no Render:
+
+  DB_URL
+
+  DB_USERNAME
+
+  DB_PASSWORD
+
+9.3 Backend em Render (Spring Boot)
+
+Atualizado para Java 21 no pom.xml
+
+Aplicação containerizada via Dockerfile
+
+Stage 1: Build (Maven + temurin 21)
+
+Stage 2: Execução leve (temurin 21 alpine)
+
+application.properties configurado com placeholders:
+
+${DB_URL}, ${MAIL_USERNAME}, ${MAIL_PASSWORD} etc.
+
+CORS habilitado apenas para:
+
+
+
+
+
+
+
+
 ### Tipos de Testes
 - **Unitários:** Testar funções individuais (ex.: validação de CPF).  
 - **Integração:** Cadastro, login e fluxo de criação de prova.  
