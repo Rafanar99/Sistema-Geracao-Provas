@@ -184,7 +184,47 @@ Fluxo Alternativo:
 
 - Se já existir uma disciplina com este nome, o sistema exibe uma mensagem de alerta.
 
-CASO DE USO: <img width="536" height="585" alt="image" src="https://github.com/user-attachments/assets/a69e50a4-e4c6-4d1c-af0e-d671affb41ec" />
+## UC06 — Explorar Questões
+
+Atores: Professor, Administrador
+Descrição: Permite consultar e filtrar questões do banco de dados.
+
+Fluxo Principal
+
+- Usuário acessa o menu “Explorar Questões”.
+
+- Aplica filtros por disciplina, criador, dificuldade e tipo.
+
+- O sistema retorna a lista filtrada.
+
+## UC07 — Selecionar Questões para Prova
+
+Atores: Professor, Administrador
+Descrição: Permite montar a prova selecionando questões do banco.
+
+Fluxo Principal
+
+- Usuário acessa o menu “Gerar Prova”.
+
+- Seleciona questões desejadas.
+
+- Adiciona as questões à prova.
+
+- Finaliza e gera o documento.
+
+## UC08 — Visualizar Log de Auditoria
+
+Ator: Administrador
+Descrição: Permite acompanhar todas as ações críticas registradas no sistema.
+
+Fluxo Principal
+
+- Administrador acessa o menu “Log de Auditoria”.
+
+- O sistema exibe registros de criação, edição e exclusão.
+
+CASO DE USO: <img width="688" height="644" alt="image" src="https://github.com/user-attachments/assets/f8dbec32-6dce-48ba-994c-5b8ecafae167" />
+
 
 ---
 
