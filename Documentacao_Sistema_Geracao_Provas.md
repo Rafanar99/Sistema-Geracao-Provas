@@ -404,19 +404,154 @@ A aplicação é composta por três camadas principais:
 
 
 
-### Tipos de Testes
-- **Unitários:** Testar funções individuais (ex.: validação de CPF).  
-- **Integração:** Cadastro, login e fluxo de criação de prova.  
-- **Aceitação:** Geração correta do PDF e limite de 20 questões.  
+### 10. Testes
 
-### Casos de Teste Exemplo
-| Código | Descrição | Resultado Esperado |
-|---------|------------|--------------------|
-| CT01 | Cadastro com CPF inválido | Exibir mensagem de erro |
-| CT02 | Login com senha incorreta | Bloquear acesso |
-| CT03 | Criar prova com 21 questões | Rejeitar última questão |
-| CT04 | Gerar PDF | Criar arquivo formatado corretamente |
+# 10.1 Testes de Usuário e Autenticação
 
+## CT01 — Login com credenciais válidas
+
+- Objetivo: Verificar se o usuário consegue acessar o sistema.
+
+- Entrada: E-mail e senha corretos.
+
+- Resultado esperado: Acesso liberado e redirecionamento para o dashboard.
+
+## CT02 — Login com credenciais inválidas
+
+- Entrada: E-mail ou senha incorreta.
+
+- Resultado esperado: Exibição de mensagem de erro.
+
+## CT03 — Criar usuário (ADMIN)
+
+- Entrada: Nome + e-mail + tipo Professor.
+
+- Resultado esperado: Usuário criado e senha gerada automaticamente.
+
+## CT04 — Cadastro com e-mail duplicado
+
+- Resultado esperado: Sistema impede o cadastro e exibe erro.
+
+## 10.2 Testes de Disciplinas
+
+# CT05 — Criar disciplina
+
+- Entrada: Nome da disciplina.
+
+- Resultado esperado: Disciplina cadastrada e listada no sistema.
+
+# CT06 — Criar disciplina duplicada
+
+- Resultado esperado: Erro de disciplina já existente.
+
+# CT07 — Excluir disciplina
+
+- Resultado esperado: Registro removido do sistema sem inconsistências.
+
+## 10.3 Testes de Questões (CRUD)
+
+# CT08 — Criar nova questão
+
+- Entrada: Enunciado + disciplina + dificuldade + tipo + alternativas (quando aplicável).
+
+- Resultado esperado: Questão salva corretamente.
+
+# CT09 — Editar questão
+
+- Entrada: Alteração do texto ou alternativas.
+
+- Resultado esperado: Dados atualizados no sistema.
+
+# CT10 — Excluir questão
+
+- Resultado esperado: Questão removida e não exibida em listagens.
+
+# CT11 — Listar questões
+
+- Resultado esperado: Sistema exibe todas as questões cadastradas.
+
+# 10.4 Testes de Filtros em “Explorar Questões”
+CT12 — Filtrar por disciplina
+
+Resultado esperado: Apenas questões da disciplina selecionada.
+
+CT13 — Filtrar por criador
+
+Resultado esperado: Exibir questões do professor selecionado.
+
+CT14 — Filtrar por dificuldade
+
+Resultado esperado: Exibir somente questões “Fácil”, “Médio” ou “Difícil”.
+
+CT15 — Filtrar por tipo
+
+Resultado esperado: Exibir apenas questões Dissertativas / Múltipla Escolha / V ou F.
+
+10.5 Testes de Geração de Prova
+CT16 — Selecionar questões para a prova
+
+Entrada: Lista de questões marcadas.
+
+Resultado esperado: Questões adicionadas à prova.
+
+CT17 — Preencher cabeçalho da prova
+
+Entrada: Instituição, curso, disciplina, professor, turma.
+
+Resultado esperado: Dados incorporados ao PDF.
+
+CT18 — Gerar PDF da prova
+
+Resultado esperado: PDF baixado, com layout correto e com todas as questões selecionadas.
+
+CT19 — Gerar PDF sem preencher campos obrigatórios
+
+Resultado esperado: Sistema impede e solicita preenchimento.
+
+10.6 Testes de Auditoria
+CT20 — Registrar criação de usuário
+
+Ação: ADMIN cria novo professor.
+
+Resultado esperado: Registro presente no log.
+
+CT21 — Registrar criação de disciplina
+
+Resultado esperado: Log exibe ação realizada.
+
+CT22 — Registrar CRUD de questões
+
+Resultado esperado: Criação, edição e exclusão aparecem no log.
+
+CT23 — Visualizar log
+
+Resultado esperado: ADMIN acessa e visualiza todos os registros.
+
+9.7 Testes de Integração
+CT24 — Back-end + Front-end (Fluxo completo da prova)
+
+Criar disciplina → Criar questão → Selecionar questões → Gerar PDF.
+
+Resultado esperado: Todos os módulos funcionam em conjunto sem erro.
+
+CT25 — Conexão com o banco (TiDB/MySQL)
+
+Testar criação, leitura, atualização e exclusão.
+
+Resultado esperado: Persistência correta.
+
+9.8 Testes Não Funcionais
+CT26 — Tempo de geração do PDF
+
+Métrica: Máximo de 5 segundos.
+
+Resultado esperado: PDF gerado dentro do limite.
+
+CT27 — Segurança e autenticação
+
+Teste: Acesso a rotas administrativas sem login.
+
+Resultado esperado: Sistema bloqueia acesso.
 
 ---
 ## 10. Fluxos do Sistema (Diagramas de Sequência)
