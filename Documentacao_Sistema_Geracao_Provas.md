@@ -310,13 +310,13 @@ A aplicação é composta por três camadas principais:
 
 - Conexão via variáveis de ambiente no Render
 
-- Variáveis configuradas no Render:
+  ##Variáveis configuradas no Render:
 
-  DB_URL
+      DB_URL
 
-  DB_USERNAME
+      DB_USERNAME
 
-  DB_PASSWORD
+      DB_PASSWORD
 
 9.3 Backend em Render (Spring Boot)
 
