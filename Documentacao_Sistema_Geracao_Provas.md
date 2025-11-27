@@ -291,7 +291,7 @@ A aplicação é composta por três camadas principais:
 
 ## 9. Implantação / Deployment
 
-9.1 Arquitetura de Hospedagem
+## 9.1 Arquitetura de Hospedagem
 
 | Componente     | Serviço                            | Descrição                          |
 | -------------- | ---------------------------------- | ---------------------------------- |
@@ -300,7 +300,7 @@ A aplicação é composta por três camadas principais:
 | Banco de Dados | **TiDB Cloud (MySQL compatível)**  | Armazenamento relacional escalável |
 
 
-9.2 Banco de Dados em TiDB Cloud
+## 9.2 Banco de Dados em TiDB Cloud
 
 - Instância provisionada na nuvem via painel da TiDB Cloud
 
@@ -318,22 +318,40 @@ A aplicação é composta por três camadas principais:
 
       DB_PASSWORD
 
-9.3 Backend em Render (Spring Boot)
+## 9.3 Backend em Render (Spring Boot)
 
-Atualizado para Java 21 no pom.xml
+- Atualizado para Java 21 no pom.xml
 
-Aplicação containerizada via Dockerfile
+- Aplicação containerizada via Dockerfile
 
-Stage 1: Build (Maven + temurin 21)
+    - Stage 1: Build (Maven + temurin 21)
 
-Stage 2: Execução leve (temurin 21 alpine)
+    - Stage 2: Execução leve (temurin 21 alpine)
 
-application.properties configurado com placeholders:
+- application.properties configurado com placeholders:
 
-${DB_URL}, ${MAIL_USERNAME}, ${MAIL_PASSWORD} etc.
+    - ${DB_URL}, ${MAIL_USERNAME}, ${MAIL_PASSWORD} etc.
 
-CORS habilitado apenas para:
+- CORS habilitado apenas para:
+   - https://easyquiz-psi.vercel.app
+ 
+ ## 9.4 Frontend na Vercel (Next.js)
 
+- Conectado ao GitHub
+
+- Variável NEXT_PUBLIC_API_URL configurada
+
+- Next.config.ts ajustado para melhorar o build
+
+- API centralizada em /src/services/api.ts
+
+## 9.5 Fluxo de Deploy Contínuo (CI/CD)
+
+- Commits na branch main disparam:
+
+- novo build do backend no Render
+
+- novo build do frontend na Vercel
 
 
 
