@@ -2,7 +2,7 @@
 
 **Nome do Projeto:** Sistema de Geração de Provas  
 **Curso:** Análise e Desenvolvimento de Sistemas - FATEC Guarulhos  
-**Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Gustavo Lima
+**Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Rafael William
 **Orientador:** Jadir
 
 ## Sumário
@@ -82,7 +82,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 | RF07   | O sistema deve manter um repositório de questões com: enunciado, tipo, dificuldade, autor da questão e alternativas (quando aplicável). |
 | RF08   | O professor pode criar provas utilizando questões do repositório.                                                     |
 | RF09   | Não tem Limite de questões.                                                                           |
-| RF10   | O sistema deve permitir gerar **PDF personalizado** contendo Nome/RA/Data/Logo da instituição.                        |                                  |
+| RF10   | O sistema deve permitir gerar **PDF** contendo Nome/RA/Data/Logo da instituição.                        |                                  |
 
 
 ## 4.2 Requisitos Não Funcionais (RNF)
@@ -327,7 +327,7 @@ A aplicação é composta por três camadas principais:
 | Camada         | Tecnologia                   | Função                                   |
 | -------------- | ---------------------------- | ---------------------------------------- |
 | Front-end      | **Next.js / Tailwind CSS**   | Interface responsiva e rápida            |
-| Back-end       | **Spring Boot 3.x**          | Lógica de negócio e APIs REST            |
+| Back-end       | **Spring Boot 3.x com Docker**          | Lógica de negócio e APIs REST            |
 | Banco de Dados | **MySQL**                    | Persistência de dados                    |
 | E-mail         | **JavaMail / SMTP**          | Envio automático de senha e notificações |
 | PDF            | **PDFMAKE **                 | Geração e formatação de provas           |
