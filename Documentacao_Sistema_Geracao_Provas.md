@@ -216,14 +216,19 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 
 ### 7.1 Telas do Sistema
 
-| Tela                                  | Descrição                                     |
-| ------------------------------------- | --------------------------------------------- |
-| Tela de Login                         | Autenticação de usuários.                     |
-| Tela de Cadastro de Professor (ADMIN) | Permite criação de novos professores.         |
-| Dashboard Principal do Professor      | Acesso a visão geral das funcionalidades.     |
-| Tela de Criação de Prova              | Exportar provas em PDF.    |
-| Tela de Editar perfil                 | Permite editar perfil já criado.            |
-| Tela de registros                     | Visualizar logs e registros do sistema.            |
+| Tela                                                             | Descrição Corporativa                                                                                                                                                                                            |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tela de Login**                                                | Porta de entrada do sistema. Permite autenticação via e-mail e senha. Em caso de credenciais inválidas, retorna feedback imediato ao usuário.                                                                    |
+| **Dashboard**                                                    | Painel gerencial com indicadores-chave: total de questões cadastradas, contagem por tipo (Múltipla Escolha, V/F, Dissertativa) e atalho rápido para ações estratégicas como Criar Questão e Gerar Prova.         |
+| **Criar Nova Questão**                                           | Tela transacional destinada ao cadastro de questões. Permite definir enunciado, disciplina, grau de dificuldade, tipo da questão e alternativas (quando aplicável).                                              |
+| **Minhas Questões**                                              | Repositório individual das questões cadastradas pelo usuário. Possibilita editar, excluir e visualizar detalhes. Inclui ações rápidas de manutenção.                                                             |
+| **Explorar Questões**                                            | Tela estratégica de busca avançada, permitindo filtros por: disciplina, autor da questão, dificuldade e tipo. Viabiliza curadoria eficiente do banco de questões antes da montagem da prova.                     |
+| **Gerar Prova**                                                  | Interface de composição da prova. O usuário seleciona as questões desejadas e define o cabeçalho institucional (nome da instituição, curso, disciplina, professor e turma). Gera o PDF finalizado.               |
+| **Cadastrar Disciplina (ADMIN)**                                 | Tela administrativa para criação, edição e exclusão de disciplinas. Suporta operação contínua de catalogação do currículo.                                                                                       |
+| **Cadastrar Usuário (ADMIN)**                                    | Permite ao administrador criar novos usuários (professores). Inclui nome, e-mail e perfil. A senha é enviada automaticamente por e-mail (conforme política de segurança).                                        |
+| **Logs de Auditoria (ADMIN)**                                    | Tela analítica que consolida as ações críticas do sistema: criação, edição e exclusão de usuários, disciplinas e questões. Permite rastreabilidade total para fins de conformidade (LGPD e auditorias internas). |
+| **Visualizar Provas Geradas** *(opcional – confirmar se existe)* | Caso exista listagem, permite acesso às provas já geradas e exportações anteriores. *(Se este recurso não existe no sistema, removemos depois.)*                                                                 |
+
 
 
 
