@@ -32,7 +32,7 @@
 
 
 # 1. Visão Geral / Introdução
-A elaboração manual de provas demanda tempo e disciplina. O EasyQuiz é um sistema web que facilita a criação, o gerenciamento e a exportação de provas em PDF. Professores poderão cadastrar-se, criar provas com até 20 questões, reutilizar questões do repositório e exportar provas com cabeçalho institucional.
+A elaboração manual de provas demanda tempo e disciplina. O EasyQuiz é um sistema web que facilita a criação, o gerenciamento e a exportação de provas em PDF. Professores poderão cadastrar-se, criar provas, reutilizar questões do repositório e exportar provas com cabeçalho institucional.
 ---
 
 # 2. Objetivos e Escopo
@@ -41,7 +41,7 @@ A elaboração manual de provas demanda tempo e disciplina. O EasyQuiz é um sis
 Desenvolver um sistema web que permita que professores criem, gerenciem e exportem provas de forma prática e segura.
 
 ## Objetivos Específicos
-- Permitir o **cadastro e autenticação de professores** com validação de CPF.  
+- Permitir o cadastro e autenticação de professores, realizado exclusivamente pelo Administrador do sistema.  
 - Implementar um **painel de controle** para criação, edição e exclusão de provas.   
 - Organizar as provas por **matéria**.  
 - Permitir **exportação das provas em formato PDF customizável**.  
