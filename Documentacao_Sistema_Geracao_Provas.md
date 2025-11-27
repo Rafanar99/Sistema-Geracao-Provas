@@ -668,12 +668,3 @@ Fluxo Principal
 - Front-end exibe entradas de auditoria.
 
 <img width="1213" height="562" alt="image" src="https://github.com/user-attachments/assets/77e5c3be-7592-4fbd-aa00-86701534bc58" />
-
----
-
-## 📚 Referências
-- PRESSMAN, Roger S. *Engenharia de Software: uma abordagem profissional.* McGraw Hill, 2016.  
-- SOMMERVILLE, Ian. *Engenharia de Software.* 10ª ed. Pearson, 2019.  
-- GIL, Antonio Carlos. *Como Elaborar Projetos de Pesquisa.* Atlas, 2018.  
-- Documentação do Node.js — https://nodejs.org/  
-- Documentação do jsPDF — https://github.com/parallax/jsPDF  
