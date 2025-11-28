@@ -86,7 +86,8 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ## 4.2 Requisitos Não Funcionais (RNF)
 
-| Código | Descrição | --------------------------------------------------------------------------------------------------- |
+| Código | Descrição | 
+| -------------------------------------------------------------------------------------------------------- |
 | RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.                                                 |
 | RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**.                          |
 | RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                                                    |
@@ -254,7 +255,7 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 
 ## 7.1 Telas do Sistema
 
-| Tela                                                             | Descrição Corporativa                                                                                  |
+| Tela                                                             | Descrição Corporativa    |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | **Tela de Login**                                                | Porta de entrada do sistema. Permite autenticação via e-mail e senha. Em caso de credenciais inválidas, retorna feedback imediato ao usuário.                                                                    |
 | **Dashboard**                                                    | Painel gerencial com indicadores-chave: total de questões cadastradas, contagem por tipo (Múltipla Escolha, V/F, Dissertativa) e atalho rápido para ações estratégicas como Criar Questão e Gerar Prova.         |
