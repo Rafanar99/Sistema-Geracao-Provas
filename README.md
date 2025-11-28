@@ -70,30 +70,31 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 # 4. Requisitos
 
-## 4.1 Requisitos Funcionais (RF)
+# 4. Requisitos
 
-| Código | Descrição | 
-| ------------------------------------------------------------------------------------                     |
-| RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.     |
-| RF02   | O sistema deve permitir o login por e-mail e senha.                                                 |
-| RF03   | O sistema deve enviar automaticamente uma senha gerada ao e-mail do professor cadastrado.             |
-| RF04   | O sistema deve registrar em log todas as ações de criação, edição e exclusão de usuários realizadas por ADMIN (LogCRUD).                |
-| RF05   | O sistema deve permitir o CRUD de disciplinas.      |
-| RF06   | O sistema deve associar professores às disciplinas.      |
+## 4.1 Requisitos Funcionais (RF)
+| Código | Descrição                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------- |
+| RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.                          |
+| RF02   | O sistema deve permitir o login por e-mail e senha.                                                                   |
+| RF03   | O sistema deve enviar automaticamente uma senha gerada ao e-mail do professor cadastrado.                             |
+| RF04   | O sistema deve registrar em log todas as ações de criação, edição e exclusão de usuários realizadas por ADMIN (LogCRUD).          |
+| RF05   | O sistema deve permitir o CRUD de disciplinas.                                                                        |
+| RF06   | O sistema deve associar professores às disciplinas.                                                                   |
 | RF07   | O sistema deve manter um repositório de questões com: enunciado, tipo, dificuldade, autor da questão e alternativas (quando aplicável). |
-| RF08   | O professor pode criar provas utilizando questões do repositório.                                           |
-| RF09   | Não tem Limite de questões.        |
-| RF10   | O sistema deve permitir gerar **PDF** contendo Nome/RA/Data/Logo da instituição.      |                                  
+| RF08   | O professor pode criar provas utilizando questões do repositório.                                                     |
+| RF09   | Não tem Limite de questões.                                                                           |
+| RF10   | O sistema deve permitir gerar **PDF** contendo Nome/RA/Data/Logo da instituição.                        |                                  |
+
 
 ## 4.2 Requisitos Não Funcionais (RNF)
-
-| Código | Descrição | 
-| -------------------------------------------------------------------------------------------------------- |
-| RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.                                                 |
-| RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**.                          |
-| RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                                                    |
-| RNF04  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                                         |
-| RNF05  | A geração de PDF não deve ultrapassar 5 segundos.                                                               |
+| Código | Descrição                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------- |
+| RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.          |
+| RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**. |
+| RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                           |
+| RNF04  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                |
+| RNF05  | A geração de PDF não deve ultrapassar 5 segundos.                                      |                                                              |
 
 ---
 
