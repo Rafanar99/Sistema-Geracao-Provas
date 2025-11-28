@@ -71,6 +71,7 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 # 4. Requisitos
 
 ## 4.1 Requisitos Funcionais (RF)
+
 | Código | Descrição                                                                                                                               |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------|
 | RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.                                            |
@@ -85,13 +86,14 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 | RF10   | O sistema deve permitir gerar **PDF** contendo Nome/RA/Data/Logo da instituição.                                                        |                                  
 
 ## 4.2 Requisitos Não Funcionais (RNF)
+
 | Código | Descrição                                                                                                             |
 | ------ | --------------------------------------------------------------------------------------------------------------------- |
-| RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.          |
-| RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**. |
-| RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                           |
-| RNF04  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                |
-| RNF05  | A geração de PDF não deve ultrapassar 5 segundos.                                      |
+| RNF01  | O sistema deve utilizar **SMTP com TLS** para envio de e-mails.                                                       |
+| RNF02  | O sistema deve disponibilizar documentação da API via **Springdoc OpenAPI / Swagger**.                                |
+| RNF03  | O sistema deve utilizar MySQL como banco de dados principal.                                                          |
+| RNF04  | A arquitetura deve ser desenvolvida em Spring Boot 3.x.                                                               |
+| RNF05  | A geração de PDF não deve ultrapassar 5 segundos.                                                                     |
 
 
 ---
