@@ -71,19 +71,18 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 # 4. Requisitos
 
 ## 4.1 Requisitos Funcionais (RF)
-| Código | Descrição                                                                                                             |
-| ------ | --------------------------------------------------------------------------------------------------------------------- |
-| RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.                          |
-| RF02   | O sistema deve permitir o login por e-mail e senha.                                                                   |
-| RF03   | O sistema deve enviar automaticamente uma senha gerada ao e-mail do professor cadastrado.                             |
-| RF04   | O sistema deve registrar em log todas as ações de criação, edição e exclusão de usuários realizadas por ADMIN (LogCRUD).          |
-| RF05   | O sistema deve permitir o CRUD de disciplinas.                                                                        |
-| RF06   | O sistema deve associar professores às disciplinas.                                                                   |
+| Código | Descrição                                                                                                                               |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------|
+| RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.                                            |
+| RF02   | O sistema deve permitir o login por e-mail e senha.                                                                                     |
+| RF03   | O sistema deve enviar automaticamente uma senha gerada ao e-mail do professor cadastrado.                                               |
+| RF04   | O sistema deve registrar em log todas as ações de criação, edição e exclusão de usuários realizadas por ADMIN (LogCRUD).                |
+| RF05   | O sistema deve permitir o CRUD de disciplinas.                                                                                          |
+| RF06   | O sistema deve associar professores às disciplinas.                                                                                     |
 | RF07   | O sistema deve manter um repositório de questões com: enunciado, tipo, dificuldade, autor da questão e alternativas (quando aplicável). |
-| RF08   | O professor pode criar provas utilizando questões do repositório.                                                     |
-| RF09   | Não tem Limite de questões.                                                                           |
-| RF10   | O sistema deve permitir gerar **PDF** contendo Nome/RA/Data/Logo da instituição.                        |                                  |
-
+| RF08   | O professor pode criar provas utilizando questões do repositório.                                                                       |
+| RF09   | Não tem Limite de questões.                                                                                                             |
+| RF10   | O sistema deve permitir gerar **PDF** contendo Nome/RA/Data/Logo da instituição.                                                        |                                  
 
 ## 4.2 Requisitos Não Funcionais (RNF)
 | Código | Descrição                                                                                                             |
@@ -256,8 +255,8 @@ DER: <img width="887" height="526" alt="image" src="https://github.com/user-atta
 
 ## 7.1 Telas do Sistema
 
-| Tela                                                             | Descrição Corporativa                                                                                                                                                                                            |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tela                                                             | Descrição Corporativa                                                                                  |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | **Tela de Login**                                                | Porta de entrada do sistema. Permite autenticação via e-mail e senha. Em caso de credenciais inválidas, retorna feedback imediato ao usuário.                                                                    |
 | **Dashboard**                                                    | Painel gerencial com indicadores-chave: total de questões cadastradas, contagem por tipo (Múltipla Escolha, V/F, Dissertativa) e atalho rápido para ações estratégicas como Criar Questão e Gerar Prova.         |
 | **Criar Nova Questão**                                           | Tela transacional destinada ao cadastro de questões. Permite definir enunciado, disciplina, grau de dificuldade, tipo da questão e alternativas (quando aplicável).                                              |
