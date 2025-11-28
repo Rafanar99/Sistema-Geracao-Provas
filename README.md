@@ -72,7 +72,8 @@ Desenvolver um sistema web que permita que professores criem, gerenciem e export
 
 ## 4.1 Requisitos Funcionais (RF)
 
-| Código | Descrição | ------------------------------------------------------------------------------------|
+| Código | Descrição | 
+| ------------------------------------------------------------------------------------                     |
 | RF01   | O sistema deve permitir o cadastro de professores realizado **apenas por um usuário ADMIN**.     |
 | RF02   | O sistema deve permitir o login por e-mail e senha.                                                 |
 | RF03   | O sistema deve enviar automaticamente uma senha gerada ao e-mail do professor cadastrado.             |
