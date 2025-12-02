@@ -2,7 +2,7 @@
 
 **Nome do Projeto:** Sistema de Geração de Provas  
 **Curso:** Análise e Desenvolvimento de Sistemas - FATEC Guarulhos  
-**Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Rafael William
+**Autores:** Ryan Vincente, Luiz Pergorari, Guilherme Olivatto, Rafael Narciso, Rafael William, Gustavo Lima
 **Orientador:** Jadir
 
 ## Sumário
